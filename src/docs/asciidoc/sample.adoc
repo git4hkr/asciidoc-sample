@@ -1,3 +1,4 @@
+:source-highlighter: prettify
 = サンプル設計書
 サンプル太郎 <sample@example.com>
 v1.0, 2016-03-15
@@ -6,20 +7,47 @@ v1.0, 2016-03-15
 == PlantUMLによるクラス図の例
 UMLはPlantUMLで記述できる。日本語（UTF-8）でも記述可能。
 
+[format="csv", options="header"]
+|=======
+アーティスト,トラック,ジャンル,ジャンル,ジャンル
+"Baauer,Harlemasdfsafggasdgsafafaf", Shake,Hip Hop,,sd34rtyggg65uj76j6j6jrt footnote:[この声明のついての明確化]
+"　　The Lumineers\<<っｓ>>",Ho Hey,Folk Rock,,
+|=======
+
 .クラス図
 [plantuml, classediagram, png]
 ....
-class "クラスA" {
-  +メソッド1()
+interface "クラスA" {
+	+メソッド1()
 }
 class "クラスB" {
-  +メソッド2()
++メソッド2()
 }
 class "クラスC" {
 }
 "クラスA" -- "クラスB"
 "クラスA" <|-- "クラスC"
 ....
+
+=== ブロック
+ 
+.コードブロックの例
+[source,ruby]
+----
+require 'optparse'
+opt = OptionParser.new
+ 
+opt.on('-a') {|v| p v }
+opt.on('-b') {|v| p v }
+ 
+opt.parse!(ARGV)
+p ARGV
+ 
+ruby sample.rb -a foo bar -b baz
+# => true
+     true
+     ["foo", "bar", "baz"]
+----
 
 == Ditaaによる図の例
 箱と線で表現するものはDitaaで記述可能。日本語（UTF-8）は文字化けする
@@ -46,3 +74,12 @@ class "クラスC" {
      |text:'1'  |  |text:'3'  |
      \----------/  \----------/
 ....
+
+[mermaid]
+....
+graph LR;
+    AsciiDocテキスト -- asciidocotor-pdf --> PDF仕様書;
+    PlantUMLテキスト -- PlantUML --> png画像;
+    png画像 -- asciidoctor-pdf --> PDF仕様書;
+....
+
