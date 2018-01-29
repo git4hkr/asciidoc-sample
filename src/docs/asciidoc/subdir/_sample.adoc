@@ -1,0 +1,43 @@
+ifndef::imagesdir[:imagesdir: ../images]
+
+== ユーザー情報更新バッチ
+v1.0, 2016-03-15
+
+.クラス図
+[plantuml, classediagram, png]
+....
+interface "クラスA" {
+	+メソッド1()
+}
+class "クラスB" {
++メソッド2()
+}
+class "クラスC" {
+}
+"クラスA" -- "クラスB"
+"クラスA" <|-- "クラスC"
+....
+
+.csv一覧
+[format="csv", options="header"]
+|===
+include::test.csv[]
+|===
+
+.tabbycat
+image::サブdir/tabbycats.jpg[]
+
+
+.mermaid
+image::サブdir/mermaid-diagram.svg[]
+////
+....mermaid
+graph LR
+A[Christmas] -->|Get money| B(Go shopping)
+B --> C{Let me think}
+C -->|One| D[Laptop]
+C -->|Two| E[iPhone]
+C -->|Three| F[Car]
+....
+////
+

@@ -1,4 +1,6 @@
 :source-highlighter: prettify
+ifndef::imagesdir[:imagesdir: images]
+
 = サンプル設計書
 サンプル太郎 <sample@example.com>
 v1.0, 2016-03-15
@@ -10,8 +12,7 @@ UMLはPlantUMLで記述できる。日本語（UTF-8）でも記述可能。
 [format="csv", options="header"]
 |=======
 アーティスト,トラック,ジャンル,ジャンル,ジャンル
-"Baauer,Harlemasdfsafggasdgsafafaf", Shake,Hip Hop,,sd34rtyggg65uj76j6j6jrt footnote:[この声明のついての明確化]
-"　　The Lumineers\<<っｓ>>",Ho Hey,Folk Rock,,
+"Baauer,Harlemasdfsafggasdgsafafaf", Shake,Hip Hop,,sd34rtyggg65uj76j6j6jrt "　　The Lumineers\<<っｓ>>",Ho Hey,Folk Rock,,
 |=======
 
 .クラス図
@@ -51,35 +52,19 @@ ruby sample.rb -a foo bar -b baz
 
 == Ditaaによる図の例
 箱と線で表現するものはDitaaで記述可能。日本語（UTF-8）は文字化けする
+footnote:[この声明のついての明確化]
 
-.a = 1 + 3の構文木
-[ditaa, syntaxtree]
-....
-    /--------\
-    |cmpExpr |
-    |text:'='|
-    \--------/
-       |   |
-  /----/   \-----\
-  |              |
-/--------\   /--------\
-|variable|   |addExpr |
-|text:'a'|   |text:'+'|
-\--------/   \--------/
-               |   |
-           /---/   \---\
-           |           |
-     /----------\  /----------\
-     |literal   |  |literal   |
-     |text:'1'  |  |text:'3'  |
-     \----------/  \----------/
-....
 
-[mermaid]
+image::mermaid-diagram-20180122013320.svg[]
+////
+....mermaid
+graph LR
+A[Christmas] -->|Get money| B(Go shopping)
+B --> C{Let me think}
+C -->|One| D[Laptop]
+C -->|Two| E[iPhone]
+C -->|Three| F[Car]
 ....
-graph LR;
-    AsciiDocテキスト -- asciidocotor-pdf --> PDF仕様書;
-    PlantUMLテキスト -- PlantUML --> png画像;
-    png画像 -- asciidoctor-pdf --> PDF仕様書;
-....
+////
 
+== asdfgf
