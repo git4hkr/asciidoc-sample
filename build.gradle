@@ -3,6 +3,7 @@ buildscript {
         classpath 'org.asciidoctor:asciidoctorj-epub3:1.5.0-alpha.6'
         classpath 'org.asciidoctor:asciidoctorj-pdf:1.5.0-alpha.15'
         classpath 'org.asciidoctor:asciidoctorj-diagram:1.3.1'
+        classpath 'com.github.allati.asciidoctor.monotree:asciidoctor-extension-monotree:0.0.1'
     }
 }
 
@@ -16,7 +17,7 @@ apply plugin: 'org.asciidoctor.convert'
 version = '1.0.0-SNAPSHOT'
 
 asciidoctorj {
-    version = '1.5.5'
+    version = '1.5.6'
 }
 
 asciidoctor {
@@ -25,8 +26,7 @@ asciidoctor {
     outputDir = file('build')
     attributes \
     	'doctype': 'book',
-//        'imagesdir' : "$rootDir/build/images",
-    	'data-uri': '',
+//    	'data-uri': '',
         'build-gradle': file('build.gradle'),
         'sourcedir': project.sourceSets.main.java.srcDirs[0],
         'endpoint-url': 'http://example.org',
@@ -40,5 +40,5 @@ asciidoctor {
         'toc-title': '\u76EE\u6B21',
         'numbered': true
 }
-defaultTasks 'asciidoctor'
+defaultTasks 'clean','asciidoctor'
 

@@ -1,10 +1,28 @@
 ifndef::imagesdir[:imagesdir: ../images]
 
-== ユーザー情報更新バッチ
+== C70_001 ユーザー情報更新バッチ
 v1.0, 2016-03-15
 
-.クラス図
-[plantuml, classediagram, png]
+=== データフロー図
+
+.DFD
+image::サブdir/mermaid-diagram-20180318003415.svg[]
+
+=== 入出力
+==== 入力一覧
+==== 出力一覧
+
+=== 機能詳細
+==== FN001 XXX機能
+==== FN002 XXX機能
+
+=== トランザクション
+
+
+=== インテグレーション
+asa
+.SpringBeans
+[plantuml, C70_001_class, png]
 ....
 interface "クラスA" {
 	+メソッド1()
@@ -17,27 +35,3 @@ class "クラスC" {
 "クラスA" -- "クラスB"
 "クラスA" <|-- "クラスC"
 ....
-
-.csv一覧
-[format="csv", options="header"]
-|===
-include::test.csv[]
-|===
-
-.tabbycat
-image::サブdir/tabbycats.jpg[]
-
-
-.mermaid
-image::サブdir/mermaid-diagram.svg[]
-////
-....mermaid
-graph LR
-A[Christmas] -->|Get money| B(Go shopping)
-B --> C{Let me think}
-C -->|One| D[Laptop]
-C -->|Two| E[iPhone]
-C -->|Three| F[Car]
-....
-////
-

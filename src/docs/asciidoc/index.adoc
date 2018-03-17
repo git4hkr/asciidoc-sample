@@ -1,4 +1,4 @@
-= Example Manual
+= C70 〇〇機能部 詳細設計書
 Doc Writer <doc.writer@example.org>
 2014-09-09
 :revnumber: {project-version}
@@ -8,8 +8,10 @@ ifndef::sourcedir[:sourcedir: ../java]
 
 This is a user manual for an example project.
 
-= Introduction
+== はじめに
 
+
+== 共通設計
 .Built-in
 asciidoctor-version:: {asciidoctor-version}
 safe-mode-name:: {safe-mode-name}
@@ -17,18 +19,35 @@ docdir:: {docdir}
 docfile:: {docfile}
 imagesdir:: {imagesdir}
 
-.Custom
-project-version:: {project-version}
-sourcedir:: {sourcedir}
-endpoint-url:: {endpoint-url}
+=== タイムアウトポリシー
 
-= 詳細設計
-aa
+=== リトライポリシー
+image::sunset.jpg[]
+
+
+//== 個別設計
 include::subdir/_sample.adoc[]
 
-= build.gradle
 
-[source,groovy]
+== Appendix
+
+=== メッセージ一覧
+
+.メッセージ一覧
+[format="csv", options="header"]
+|===
+include::subdir/test.csv[]
+|===
+
+=== プロパティ一覧
+
+=== ディレクトリ構成
+[tree]
 ----
-include::{build-gradle}[]
+> /var/log/
+>> bin/
+>>> c.sh
+>> lib/
+>>> a.jar
+> F
 ----
