@@ -1,25 +1,63 @@
 ifndef::imagesdir[:imagesdir: ../images]
+:sectanchors:
+:sectlinks:
+:icons: font
 
 == C70_001 ユーザー情報更新バッチ
 v1.0, 2016-03-15
 
 === データフロー図
-
+====
 .DFD
 image::サブdir/mermaid-diagram-20180318003415.svg[]
-
+====
 === 入出力
 ==== 入力一覧
 ==== 出力一覧
 
 === 機能詳細
 ==== FN001 XXX機能
-==== FN002 XXX機能
+====
+. for (ユーザーリスト) icon:retweet[2x]
++
+=====
+.. for (契約リスト) icon:retweet[2x]
++
+======
+... アカウント識別子をハッシュする +
 
-=== トランザクション
+ absolutely fatal: operation initiation lost in the dodecahedron of doom would you like to die again? y/n +
 
+... if (ハッシュ後のアカウント識別子＝○○）
++
+=======
+.データ形式
+[format="csv",options="header"]
+[frame="topbot",grid="none"]
+|======
+項目名,設定値,フォーマット,備考
+a,b,c,d
+A,B,C,D
+|======
+=======
++
+... else +
+
+ ああああああ
+
+---
+
+IMPORTANT: 本ブロック内でエラーが発生した場合はWARNログを出力し、処理を中断する。
+
+======
++
+=====
++
+. 応答処理
+====
 
 === インテグレーション
+====
 asa
 .SpringBeans
 [plantuml, C70_001_class, png]
@@ -35,3 +73,7 @@ class "クラスC" {
 "クラスA" -- "クラスB"
 "クラスA" <|-- "クラスC"
 ....
+
+====
+
+

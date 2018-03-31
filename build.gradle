@@ -25,8 +25,8 @@ asciidoctor {
     requires = ['asciidoctor-diagram']
     outputDir = file('build')
     attributes \
-    	'doctype': 'book',
-//    	'data-uri': '',
+    	'doctype': 'article',
+    	'data-uri': '',
         'build-gradle': file('build.gradle'),
         'sourcedir': project.sourceSets.main.java.srcDirs[0],
         'endpoint-url': 'http://example.org',

@@ -5,11 +5,16 @@ Doc Writer <doc.writer@example.org>
 :example-caption!:
 ifndef::imagesdir[:imagesdir: images]
 ifndef::sourcedir[:sourcedir: ../java]
+:sectanchors:
+:sectlinks:
+:icons: font
 
 This is a user manual for an example project.
 
 == はじめに
-
+[.lead]
+この段落は、第一段落のスタイル(文字が大きいスタイル)が適用されます。
+[.lead
 
 == 共通設計
 .Built-in
@@ -20,9 +25,11 @@ docfile:: {docfile}
 imagesdir:: {imagesdir}
 
 === タイムアウトポリシー
+aaa link:#MSG001[MSG001]
+icon:comment[2x] This is a comment icon
 
 === リトライポリシー
-image::sunset.jpg[]
+image::AAAA.svg[]
 
 
 //== 個別設計
@@ -32,7 +39,6 @@ include::subdir/_sample.adoc[]
 == Appendix
 
 === メッセージ一覧
-
 .メッセージ一覧
 [format="csv", options="header"]
 |===
@@ -42,6 +48,7 @@ include::subdir/test.csv[]
 === プロパティ一覧
 
 === ディレクトリ構成
+.ディレクトリツリー
 [tree]
 ----
 > /var/log/
@@ -51,3 +58,22 @@ include::subdir/test.csv[]
 >>> a.jar
 > F
 ----
+
++
++
++
++
++
++
+
+
+
+
+
+
+
+
+
+
+
+aaaa
