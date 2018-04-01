@@ -38,7 +38,10 @@ asciidoctor {
         'idseparator': '-',
         'docinfo1': '',
         'toc-title': '\u76EE\u6B21',
-        'numbered': true
+        'numbered': true,
+        'pdf-stylesdir': 'theme',
+        'pdf-style': 'custom',
+		'copyright': 'Copyright &#169; HogeHoge CO.,LTD. All right reserved.'
 }
 defaultTasks 'clean','asciidoctor'
 

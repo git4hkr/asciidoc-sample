@@ -9,8 +9,6 @@ ifndef::sourcedir[:sourcedir: ../java]
 :sectlinks:
 :icons: font
 
-This is a user manual for an example project.
-
 == はじめに
 [.lead]
 この段落は、第一段落のスタイル(文字が大きいスタイル)が適用されます。
@@ -41,6 +39,7 @@ include::subdir/_sample.adoc[]
 === メッセージ一覧
 .メッセージ一覧
 [format="csv", options="header"]
+[frame="topbot",grid="none"]
 |===
 include::subdir/test.csv[]
 |===
@@ -59,21 +58,10 @@ include::subdir/test.csv[]
 > F
 ----
 
-+
-+
-+
-+
-+
-+
-
-
-
-
-
-
-
-
-
-
-
-aaaa
+== 変更履歴
+.変更履歴
+[format="csv", options="header"]
+[frame="topbot",grid="none"]
+|===
+include::subdir/test.csv[]
+|===
